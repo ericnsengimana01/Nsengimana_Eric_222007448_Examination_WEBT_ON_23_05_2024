@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Linking to external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" title="style 1" media="screen, tv, projection, handheld, print"/>
+  <!-- Defining character encoding -->
+  <meta charset="utf-8">
+  <!-- Setting viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>users</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Normal link */
+    a {
+      padding: 10px;
+      color: white;
+      background-color: pink;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    /* Visited link */
+    a:visited {
+      color: purple;
+    }
+    /* Unvisited link */
+    a:link {
+      color: brown; /* Changed to lowercase */
+    }
+    /* Hover effect */
+    a:hover {
+      background-color: white;
+    }
+
+    /* Active link */
+    a:active {
+      background-color: red;
+    }
+
+    /* Extend margin left for search button */
+    button.btn {
+      margin-left: 15px; /* Adjust this value as needed */
+      margin-top: 4px;
+    }
+    /* Extend margin left for search button */
+    input.form-control {
+      margin-left: 1200px; /* Adjust this value as needed */
+
+      padding: 8px;
+     
+    }
+ </style>
+
+   <!-- JavaScript validation and content load for insert data-->
+        <script>
+            function confirmInsert() {
+                return confirm('Are you sure you want to insert this record?');
+            }
+        </script>
+
+  </head>
+
+  <header>
+
+<body bgcolor="white">
+  <form class="d-flex" role="search" action="search.php">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  <ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;">
+     <img src="images/conflic pic 5.jpeg" width="90" height="75" alt="Logo">
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./home.html">HOME</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./about.html">ABOUT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./contact.html">CONTACT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./users.html">users</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./instructors.html">instructors</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./workshops.html">workshops</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./conflict_resolution_resources.html">conflict_resolution_resources</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./caurse.html">caurse</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./lesson.html">lesson</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./assessment.html">assessment</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./progress.html">progress</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./certificate.html">certificate</a>
+  </li>
+ <li style="display: inline; margin-right: 10px;"><a href="./users.html">users</a>
+  </li>
+
+ 
+
+   
+        <!-- nsengimana eric 222007448 -->
+  
+    <li class="dropdown" style="display: inline; margin-right: 10px;">
+      <a href="#" style="padding: 10px; color: white; background-color: skyblue; text-decoration: none; margin-right: 15px;">Settings</a>
+      <div class="dropdown-contents">
+        <!-- Links inside the dropdown menu -->
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="logout.php">Logout</a>
+      </div>
+    </li><br><br>
+    
+    
+    
+  </ul>
+
+</header>
+<section>
+
+    <h1>users Panel</h1>
+    
+    <table border="1">
+        <tr>
+    <h2>Create Record</h2>
+    <form method="post" action="insert_users.php" onsubmit="return confirmInsert();">
+
+            
+        <label for="fname">fname:</label>
+        <input type="text" id="text" name="fname" required><br><br>
+
+       <label for="lname">lname:</label>
+        <input type="text" id="text" name="lname" required><br><br>
+
+        <label for="email">email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+
+     <label for="password">password:</label>
+        <input type="text" id="password" name="password" required><br><br>
+
+        <label for="district">district:</label>
+        <input type="text" id="district" name="district" required><br><br>
+
+        <label for="sector">sector:</label>
+        <input type="text" id="sector" name="sector" required><br><br>
+
+
+       <label for="village">village:</label>
+        <input type="text" id="village" name="village" required><br><br>
+
+        <label for="role">role:</label>
+        <input type="text" id="role" name="role" required><br><br>
+        <input type="submit" name="add" value="Insert">
+      
+
+    </form>    </td>
+            </tr>
+    </table>
+    
+  <h2>Table users</h2>
+  
+    <table border="1">
+        <tr>
+                       <td><form method="post" action="users.php">
+                        <label for="newuser_id"> user_id:</label>
+                        <input type="number" name="user_id" value="user_id"><br>
+
+                        <label for="newfname">New fname:</label>
+                        <input type="text" id="newfname" name="newfname" placeholder="newfname"><br>
+                        
+                        <label for="newlname">New lname:</label>
+                        <input type="text" id="newlname" name="newlname" placeholder="New lname"><br>
+
+                        <label for="newemail">New email:</label>
+                        <input type="text" id="newemail" name="newemail" placeholder="New email"><br>
+
+                        <label for="newpassword">New password:</label>
+                        <input type="text" id="newpassword" name="newpassword" placeholder="New role"><br>
+
+                        <label for="newdistrict">district:</label>
+                        <input type="text" id="newdistrict" name="newdistrict" placeholder="New district"><br>
+
+                         <label for="newsector">New sector:</label>
+                        <input type="text" id="newsector" name="newsector" placeholder="New sector"><br>
+
+                         <label for="newvillage">New village:</label>
+                        <input type="text" id="newvillage" name="newvillage" placeholder="New village"><br>
+
+                         <label for="newrole">New role:</label>
+                        <input type="text" id="newrole" name="newrole" placeholder="New role"><br>
+
+                  <button type="submit" name="update">Update</button>
+                  <button type="submit" name="delete">Delete</button>
+                        <button type="submit" name="read">Read</button>
+                        <button type="submit" name="view">view</button>
+                    </form>
+                </td>
+            </tr>
+    </table>
+</body>
+</html>

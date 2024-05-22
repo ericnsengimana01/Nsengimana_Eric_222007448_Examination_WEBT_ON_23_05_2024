@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Linking to external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" title="style 1" media="screen, tv, projection, handheld, print"/>
+  <!-- Defining character encoding -->
+  <meta charset="utf-8">
+  <!-- Setting viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>conflict_resolution_resources</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Normal link */
+    a {
+      padding: 10px;
+      color: white;
+      background-color: pink;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    /* Visited link */
+    a:visited {
+      color: purple;
+    }
+    /* Unvisited link */
+    a:link {
+      color: brown; /* Changed to lowercase */
+    }
+    /* Hover effect */
+    a:hover {
+      background-color: white;
+    }
+
+    /* Active link */
+    a:active {
+      background-color: red;
+    }
+
+    /* Extend margin left for search button */
+    button.btn {
+      margin-left: 15px; /* Adjust this value as needed */
+      margin-top: 4px;
+    }
+    /* Extend margin left for search button */
+    input.form-control {
+      margin-left: 1200px; /* Adjust this value as needed */
+
+      padding: 8px;
+     
+    }
+ </style>
+
+   <!-- JavaScript validation and content load for insert data-->
+        <script>
+            function confirmInsert() {
+                return confirm('Are you sure you want to insert this record?');
+            }
+        </script>
+
+  </head>
+
+  <header>
+
+<body bgcolor="white">
+  <form class="d-flex" role="search" action="search.php">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  <ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;">
+    <img src="images/conflic pic 5.jpeg" width="90" height="75" alt="Logo">
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./home.html">HOME</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./about.html">ABOUT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./contact.html">CONTACT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./attendees.html">attendees</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./instructors.html">instructors</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./workshops.html">workshops</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./conflict_resolution_resources.html">conflict_resolution_resources</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./caurse.html">caurse</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./lesson.html">lesson</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./assessment.html">assessment</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./progress.html">progress</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./certificate.html">certificate</a>
+  </li>
+          
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./users.html">users</a>
+  
+
+        <!-- nsengimana eric 222007448 -->
+  
+    <li class="dropdown" style="display: inline; margin-right: 10px;">
+      <a href="#" style="padding: 10px; color: white; background-color: skyblue; text-decoration: none; margin-right: 15px;">Settings</a>
+      <div class="dropdown-contents">
+        <!-- Links inside the dropdown menu -->
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="logout.php">Logout</a>
+      </div>
+    </li><br><br>
+    
+    
+    
+  </ul>
+
+</header>
+<section>
+
+    <h1>conflict_resolution_resources Panel</h1>
+    
+    <table border="1">
+        <tr>
+    <h2>Create Record</h2>
+    <form method="post" action="insert_conflict_resolution_resources.php" onsubmit="return confirmInsert();">
+
+            
+        <label for="resource_name">resource_name:</label>
+        <input type="text" id="text" name="resource_name" required><br><br>
+
+       <label for="type">type:</label>
+        <input type="text" id="text" name="type" required><br><br>
+
+        <label for="ratings">ratings:</label>
+        <input type="text" id="ratings" name="ratings" required><br><br>
+        
+        <label for="aploaded_by_instructor_id">aploaded_by_instructor_id:</label>
+        <input type="text" id="aploaded_by_instructor_id" name="aploaded_by_instructor_id" required><br><br>
+        <label for="uploaded_date">uploaded_date:</label>
+        <input type="text" id="uploaded_date" name="uploaded_date" required><br><br>
+
+        <label for="language">language:</label>
+        <input type="text" id="language" name="language" required><br><br>
+
+        <input type="text" id="phone" name="phone" required><br><br>
+        <input type="submit" name="add" value="Insert">
+      
+
+    </form>    </td>
+            </tr>
+    </table>
+    
+  <h2>Table conflict_resolution_resources</h2>
+  
+    <table border="1">
+        <tr>
+                       <td><form method="post" action="conflict_resolution_resources.php">
+                        <label for="newresource_id"> resource_id:</label>
+                        <input type="number" name="resource_id" value="resource_id"><br>
+
+                        <label for="newresource_name">New resource_name:</label>
+                        <input type="text" id="newresource_name" name="newresource_name" placeholder="newresource_name"><br>
+                        
+                        <label for="newtype">New type:</label>
+                        <input type="text" id="newtype" name="newtype" placeholder="New type"><br>
+
+                        <label for="newratings">New ratings:</label>
+                        <input type="text" id="newratings" name="newratings" placeholder="New ratings"><br>
+
+                        <label for="newaploaded_by_instructor_id">New aploaded_by_instructor_id:</label>
+                        <input type="text" id="newaploaded_by_instructor_id" name="newaploaded_by_instructor_id" placeholder="New aploaded_by_instructor_id"><br>
+
+                        <label for="newuploaded_date">uploaded_date:</label>
+                        <input type="date" id="newuploaded_date" name="newuploaded_date" placeholder="New uploaded_date"><br>
+
+                         <label for="newlanguage">New language:</label>
+                        <input type="text" id="newlanguage" name="newlanguage" placeholder="New language"><br>
+
+                  <button type="submit" name="update">Update</button>
+                  <button type="submit" name="delete">Delete</button>
+                        <button type="submit" name="read">Read</button>
+                        <button type="submit" name="view">view</button>
+                    </form>
+                </td>
+            </tr>
+    </table>
+</body>
+</html>

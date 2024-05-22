@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Linking to external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" title="style 1" media="screen, tv, projection, handheld, print"/>
+  <!-- Defining character encoding -->
+  <meta charset="utf-8">
+  <!-- Setting viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>certificate</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Normal link */
+    a {
+      padding: 10px;
+      color: white;
+      background-color: pink;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    /* Visited link */
+    a:visited {
+      color: purple;
+    }
+    /* Unvisited link */
+    a:link {
+      color: brown; /* Changed to lowercase */
+    }
+    /* Hover effect */
+    a:hover {
+      background-color: white;
+    }
+
+    /* Active link */
+    a:active {
+      background-color: red;
+    }
+
+    /* Extend margin left for search button */
+    button.btn {
+      margin-left: 15px; /* Adjust this value as needed */
+      margin-top: 4px;
+    }
+    /* Extend margin left for search button */
+    input.form-control {
+      margin-left: 1200px; /* Adjust this value as needed */
+
+      padding: 8px;
+     
+    }
+ </style>
+
+   <!-- JavaScript validation and content load for insert data-->
+        <script>
+            function confirmInsert() {
+                return confirm('Are you sure you want to insert this record?');
+            }
+        </script>
+
+  </head>
+
+  <header>
+
+<body bgcolor="white">
+  <form class="d-flex" role="search" action="search.php">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  <ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;">
+    <img src="images/logo og.jpg" width="90" height="70" alt="Logo">
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./home.html">HOME</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./about.html">ABOUT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./contact.html">CONTACT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./attendees.html">attendees</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./instructors.html">instructors</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./workshops.html">workshops</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./caurse.html">caurse</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./conflict_resolution_resources.html">conflict_resolution_resources</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./lesson.html">lesson</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./assessment.html">assessment</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./progress.html">progress</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./certificate.html">certificate</a>
+  </li>
+        
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./users.html">users</a>
+  
+    
+
+        <!-- nsengimana eric 222007448 -->
+  
+    <li class="dropdown" style="display: inline; margin-right: 10px;">
+      <a href="#" style="padding: 10px; color: white; background-color: skyblue; text-decoration: none; margin-right: 15px;">Settings</a>
+      <div class="dropdown-contents">
+        <!-- Links inside the dropdown menu -->
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="logout.php">Logout</a>
+      </div>
+    </li><br><br>
+    
+    
+    
+  </ul>
+
+</header>
+<section>
+
+    <h1>certificate Panel</h1>
+    
+    <table border="1">
+        <tr>
+    <h2>Create Record</h2>
+    <form method="post" action="inser_certificate.php" onsubmit="return confirmInsert();">
+
+            
+        <label for="user_id">user_id:</label>
+        <input type="number" id="text" name="user_id" required><br><br>
+
+       <label for="issued_date">issued_date:</label>
+        <input type="date" id="issued_date" name="issued_date" required><br><br>
+
+        <label for="instructor_id">instructor_id:</label>
+        <input type="number" id="instructor_id" name="instructor_id" required><br><br>
+        
+        <label for="is_verified">is_verified:</label>
+        <input type="text" id="is_verified" name="is_verified" required><br><br>
+
+        <label for="completion_caurse">completion_caurse:</label>
+        <input type="text" id="completion_caurse" name="completion_caurse" required><br><br>
+
+        <input type="submit" name="add" value="Insert">
+      
+
+    </form>    </td>
+            </tr>
+    </table>
+    
+  <h2>Table certificate</h2>
+  
+    <table border="1">
+        <tr>
+                       <td><form method="post" action="certificate.php">
+                       <label for="newcert_id">new cert_id:</label>
+                        <input type="number" id="newcert_id" name="newcert_id" placeholder="newcert_id"><br>
+                        <label for="newuser_id">New user_id:</label>
+                        <input type="number" id="newuser_id" name="newuser_id" placeholder="newuser_id"><br>
+                        
+                        <label for="newissued_date">New issued_date:</label>
+                        <input type="date" id="newissued_date" name="newissued_date" placeholder="New issued_date"><br>
+
+                        <label for="newinstructor_id">New instructor_id:</label>
+                        <input type="number" id="newinstructor_id" name="newinstructor_id" placeholder="New instructor_id"><br>
+
+                        <label for="newis_verified">New is_verified:</label>
+                        <input type="text" id="newis_verified" name="newis_verified" placeholder="New is_verified"><br>
+
+                        <label for="newcompletion_caurse">new completion_caurse:</label>
+                        <input type="text" id="newcompletion_caurse" name="newcompletion_caurse" placeholder="New completion_caurse"><br>
+
+                  <button type="submit" name="update">Update</button>
+                  <button type="submit" name="delete">Delete</button>
+                        <button type="submit" name="read">Read</button>
+                        <button type="submit" name="view">view</button>
+                    </form>
+                </td>
+            </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Linking to external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" title="style 1" media="screen, tv, projection, handheld, print"/>
+  <!-- Defining character encoding -->
+  <meta charset="utf-8">
+  <!-- Setting viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>caurse</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Normal link */
+    a {
+      padding: 10px;
+      color: white;
+      background-color: pink;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    /* Visited link */
+    a:visited {
+      color: purple;
+    }
+    /* Unvisited link */
+    a:link {
+      color: brown; /* Changed to lowercase */
+    }
+    /* Hover effect */
+    a:hover {
+      background-color: white;
+    }
+
+    /* Active link */
+    a:active {
+      background-color: red;
+    }
+
+    /* Extend margin left for search button */
+    button.btn {
+      margin-left: 15px; /* Adjust this value as needed */
+      margin-top: 4px;
+    }
+    /* Extend margin left for search button */
+    input.form-control {
+      margin-left: 1200px; /* Adjust this value as needed */
+
+      padding: 8px;
+     
+    }
+ </style>
+
+   <!-- JavaScript validation and content load for insert data-->
+        <script>
+            function confirmInsert() {
+                return confirm('Are you sure you want to insert this record?');
+            }
+        </script>
+
+  </head>
+
+  <header>
+
+<body bgcolor="white">
+  <form class="d-flex" role="search" action="search.php">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  <ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;">
+     <img src="images/conflic pic 5.jpeg" width="90" height="75" alt="Logo">">
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./home.html">HOME</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./about.html">ABOUT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./contact.html">CONTACT</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./attendees.html">attendees</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./instructors.html">instructors</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./workshops.html">workshops</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./caurse.html">caurse</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./conflict_resolution_resources.html">conflict_resolution_resources</a>
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./lesson.html">lesson</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./assessment.html">assessment</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./progress.html">progress</a>
+      </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./certificate.html">certificate</a>
+  </li>
+        
+  </li>
+    <li style="display: inline; margin-right: 10px;"><a href="./users.html">users</a>
+  
+    
+
+        <!-- nsengimana eric 222007448 -->
+  
+    <li class="dropdown" style="display: inline; margin-right: 10px;">
+      <a href="#" style="padding: 10px; color: white; background-color: skyblue; text-decoration: none; margin-right: 15px;">Settings</a>
+      <div class="dropdown-contents">
+        <!-- Links inside the dropdown menu -->
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="logout.php">Logout</a>
+      </div>
+    </li><br><br>
+    
+    
+    
+  </ul>
+
+</header>
+<section>
+
+    <h1>caurse Panel</h1>
+    
+    <table border="1">
+        <tr>
+    <h2>Create Record</h2>
+    <form method="post" action="insert_caurse.php" onsubmit="return confirmInsert();">>
+
+            
+        <label for="caurse_name">caurse_name:</label>
+        <input type="text" id="text" name="caurse_name" required><br><br>
+
+       <label for="description">description:</label>
+        <input type="text" id="description" name="description" required><br><br>
+
+        <label for="duration">duration:</label>
+        <input type="date" id="duration" name="duration" required><br><br>
+        
+        <label for="category">category:</label>
+        <input type="text" id="category" name="category" required><br><br>
+        <label for="instructor_id">instructor_id:</label>
+        <input type="number" id="instructor_id" name="instructor_id" required><br><br>
+
+        <label for="workshop_id">workshop_id:</label>
+        <input type="number" id="workshop_id" name="workshop_id" required><br><br>
+
+        <input type="submit" name="add" value="Insert">
+      
+
+    </form>    </td>
+            </tr>
+    </table>
+    
+  <h2>Table caurse</h2>
+  
+    <table border="1">
+        <tr>
+                       <td><form method="post" action="caurse.php">
+                        <label for="newcaurse_id"> caurse_id:</label>
+                        <input type="number" name="caurse_id" value="caurse_id"><br>
+
+                        <label for="newcaurse_name">New caurse_name:</label>
+                        <input type="text" id="newcaurse_name" name="newcaurse_name" placeholder="newcaurse_name"><br>
+                        
+                        <label for="newdescription">New description:</label>
+                        <input type="text" id="newdescription" name="newdescription" placeholder="New description"><br>
+
+                        <label for="newduration">New duration:</label>
+                        <input type="date" id="newduration" name="newduration" placeholder="New duration"><br>
+
+                        <label for="newcategory">New category:</label>
+                        <input type="text" id="newcategory" name="newcategory" placeholder="New category"><br>
+
+                        <label for="newinstructor_id">instructor_id:</label>
+                        <input type="number" id="newinstructor_id" name="newinstructor_id" placeholder="New instructor_id"><br>
+
+                         <label for="newworkshop_id">New workshop_id:</label>
+                        <input type="number" id="newworkshop_id" name="newworkshop_id" placeholder="New workshop_id"><br>
+
+                  <button type="submit" name="update">Update</button>
+                  <button type="submit" name="delete">Delete</button>
+                        <button type="submit" name="read">Read</button>
+                        <button type="submit" name="view">view</button>
+                    </form>
+                </td>
+            </tr>
+    </table>
+</body>
+</html>
